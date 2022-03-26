@@ -1,0 +1,41 @@
+Согласно плану военной операции Владимира Путина, вы можете запустить ракеты на Украину (Хохляндию) </p>
+Выберите город
+<div class="row">
+	<div class="col-sm">
+		<select id="select" class="form-control" name="fruct">
+			<option value="1">Киев</option>
+			<option value="2" selected>Харьков</option>	
+			<option value="3">Одесса</option>
+			<option value="3">Днепр</option>
+			<option value="3">Запорожье</option>
+			<option value="3">Кривой Рог</option>
+			<option value="3">Николаев</option>
+			<option value="3">Мариуполь</option>
+			<option value="3">Луганск</option>
+			<option value="3">Винница</option>
+		</select>	
+	</div>
+	<div class="col-sm text-center">
+		<button id="js-button" class="btn btn-outline-primary">Отправить</button>
+	</div>
+	<div class="col-sm" id="js-result"> 
+		Отправлено на: 
+	</div>
+</div>
+
+<link rel="stylesheet" href="https://snipp.ru/cdn/bootstrap/4.3/bootstrap.min.css">
+<style type="text/css">
+#js-result {
+	font-size: 16px;
+	line-height: 38px;
+	color: green;
+}
+</style>
+
+<script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
+<script>
+$('#js-button').click(function(){
+	var value = $('#select option:selected').text();
+	$('#js-result').html('Отправлено на: ' + value + ' успешно');
+});
+</script>
